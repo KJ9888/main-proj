@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import states from "../data/statesData";
 import ProductModal from "../components/ProductModal";
 import { motion } from "framer-motion";
+// FIX 1: Import the local image so you can use it below
+import hawaMahalImage from "../assets/hawamahal.jpg";
 
 const StateDetailPage: React.FC = () => {
   const { stateId } = useParams<{ stateId: string }>();
@@ -22,32 +24,45 @@ const StateDetailPage: React.FC = () => {
     );
   }
 
-  const cards = [
-    {
+  // FIX 2: I've replaced the old 'cards' array with a new data structure.
+  // This provides unique, valid data for each category.
+  const categoryData = {
+    monuments: {
       key: "monuments",
-      title: "Want to know about monuments",
+      title: "Explore Monuments & Crafts",
       img: state.heroImage,
-      items: state.famousItems,
+      items: state.famousItems, // Uses the original items from your data file
     },
-    {
+    food: {
       key: "food",
-      title: "Want to know about food",
-      img: "https://upload.wikimedia.org/wikipedia/commons/6/69/Indian_food.jpg",
-      items: state.famousItems,
+      title: "Taste Local Delicacies",
+      img: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Indian_thali.jpg", // Valid placeholder URL
+      items: [ // Example unique items
+        { id: "food1", title: `${state.name} Thali`, price: 600, img: "https://upload.wikimedia.org/wikipedia/commons/1/13/Dal_Bati_Churma.jpg" },
+        { id: "food2", title: "Local Sweet", price: 450, img: "https://upload.wikimedia.org/wikipedia/commons/5/51/Ghevar_sweet.jpg" },
+      ],
     },
-    {
+    trip: {
       key: "trip",
-      title: "Want to have a trip there",
-      img: "https://upload.wikimedia.org/wikipedia/commons/0/08/Houseboat_in_Kerala.jpg",
-      items: state.famousItems,
+      title: "Plan Your Trip",
+      img: hawaMahalImage, // Use the imported local image
+      items: [ // Example unique items
+        { id: "trip1", title: "City Tour Package", price: 3000, img: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Hawa_Mahal_2011.jpg" },
+        { id: "trip2", title: "Guided Fort Visit", price: 1500, img: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Mehrangarh_Fort_Jodhpur_Rajasthan.jpg" },
+      ],
     },
-    {
+    history: {
       key: "history",
-      title: "Want to know about history",
-      img: "https://upload.wikimedia.org/wikipedia/commons/1/17/Indian_history.jpg",
-      items: state.famousItems,
+      title: "Discover the History",
+      img: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Chittorgarh_Fort_PRO_-_Shubham_Goyal_-_Chittorgarh_Fort_full_view_from_a_distance.jpg", // Valid placeholder URL
+      items: [ // Example unique items
+        { id: "hist1", title: `History of ${state.name} Book`, price: 800, img: "https://upload.wikimedia.org/wikipedia/commons/b/b3/A_History_of_Rajasthan_by_Rima_Hooja.jpg" },
+      ],
     },
-  ];
+  };
+
+  const cards = Object.values(categoryData);
+
 
   return (
     <div className="min-h-screen bg-white text-gray-800">
@@ -67,7 +82,7 @@ const StateDetailPage: React.FC = () => {
               <img src={c.img} alt={c.title} className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h3 className="text-2xl font-bold">{c.title}</h3>
-                <p className="text-gray-600 mt-2">Explore {state.name} — click to view & buy famous items.</p>
+                <p className="text-gray-600 mt-2">Explore {state.name} — view and buy related items.</p>
 
                 <div className="mt-4 grid grid-cols-1 gap-3">
                   {c.items.map((it) => (

@@ -5,7 +5,6 @@ import FeaturedTraditions from "../components/FeaturedTraditions";
 import Header from "../components/Header";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import hawaMahal from "../assets/hawamahal.jpg";
 
 const handleAnimationComplete = () => {
   console.log("All letters animated");
@@ -16,9 +15,29 @@ const LandingPage: React.FC = () => {
     <>
       <style>{`
       @keyframes pan-stars { from { transform: translateX(0);} to { transform: translateX(-50%);} }
-      @keyframes move-wave { 0% { transform: translateX(0) scaleX(1);} 50% { transform: translateX(-20px) scaleX(1.05);} 100% { transform: translateX(20px) scaleX(1);} }
-      .wave { animation: move-wave 15s ease-in-out infinite alternate; transform-origin: center; }
-      .wave-1 { animation-delay: 0s; } .wave-2 { animation-delay: -2s; animation-duration: 17s; } .wave-3 { animation-delay: -4s; animation-duration: 20s; }
+
+      /* Final fast, floating wave animation */
+      @keyframes move-wave {
+        0% {
+          transform: translateX(5px) translateY(7px);
+        }
+        50% {
+          transform: translateX(-20px) translateY(0px);
+        }
+        100% {
+          transform: translateX(5px) translateY(7px);
+        }
+      }
+
+      .wave {
+        /* Faster duration for more visible movement */
+        animation: move-wave 10s ease-in-out infinite alternate;
+        transform-origin: center;
+      }
+
+      .wave-1 { animation-delay: 0s; }
+      .wave-2 { animation-delay: -2s; animation-duration: 12s; }
+      .wave-3 { animation-delay: -4s; animation-duration: 14s; }
       `}</style>
 
       <AnimatedBackground />
@@ -43,7 +62,6 @@ const LandingPage: React.FC = () => {
           </main>
         </section>
 
-        {/* Monuments / Manuscripts / Dance sections included in landing for scrollable page */}
         <section id="monuments" className="min-h-screen flex items-center justify-center bg-[#111] text-white px-6">
           <h2 className="text-5xl font-bold text-amber-300">Monuments of India</h2>
         </section>

@@ -9,10 +9,10 @@ export type StateInfo = {
 
 const states: StateInfo[] = [
   {
-    id: "rajasthan",
-    name: "Rajasthan",
+    id: "Maharashtra",
+    name: "Maharashtra",
     heroImage:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7a/Mehrangarh_Fort_Jodhpur_Rajasthan.jpg",
+      "https://cdn.pixabay.com/photo/2022/01/19/08/46/mumbai-6949194_1280.jpg",
     description: "Land of palaces, forts and deserts.",
     famousItems: [
       { id: "1", title: "Bandhani Saree", price: 1500, img: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Bandhani_Saree.jpg" },
@@ -23,7 +23,7 @@ const states: StateInfo[] = [
     id: "kerala",
     name: "Kerala",
     heroImage:
-      "https://upload.wikimedia.org/wikipedia/commons/0/08/Houseboat_in_Kerala.jpg",
+      "https://i.ytimg.com/vi/BORNLlknFKU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBbNwwZScvSw-Yi4y3n_UQpz0-6aw",
     description: "God's Own Country — backwaters and green landscapes.",
     famousItems: [
       { id: "1", title: "Spices Pack", price: 400, img: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Variety_of_spices_%283306563646%29.jpg" },
@@ -34,7 +34,7 @@ const states: StateInfo[] = [
     id: "uttarpradesh",
     name: "Uttar Pradesh",
     heroImage:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d8/Taj-Mahal.jpg",
+      "https://wa-global-assets.s3.ap-south-1.amazonaws.com/blog_image/qmfFi2hCww8NAM56DTA3Ab61FgiPdBpl1Enumeo2.png",
     description: "Home of the Taj, rich cultural history.",
     famousItems: [
       { id: "1", title: "Petha (Sweet)", price: 120, img: "https://upload.wikimedia.org/wikipedia/commons/5/50/Petha_making.jpg" },
