@@ -1,4 +1,3 @@
-import React from 'react';
 
 // This component displays a real image from a URL
 const ImageDisplay = ({ imageUrl, altText }) => (

@@ -11,57 +11,57 @@ const storiesData = [
     id: 'sambhaji-maharaj',
     name: 'Sambhaji Maharaj',
     description: "The valiant Maratha king and his defiance against the Mughal Empire.",
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Sambhaji_Maharaj_portrait.jpg',
+    imageUrl: 'https://img.indiaforums.com/media/800x0/63/1979-vicky-kaushal-roars-as-chhatrapati-sambhaji-maharaj-in-the-gripping-trailer-of-chhaava.webp',
     path: '/stories/sambhaji-maharaj'
   },
   {
     id: 'ashoka-the-great',
     name: 'Ashoka the Great',
     description: 'The emperor who waged war on war itself.',
-    imageUrl: 'https://imgs.search.brave.com/l9UgXOvqatlGaODTXZbw0qLap2LOqO-FrZ6aG8hBl_g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI1/MTUzNzUzMy9waG90/by9kZWxoaS1pbmRp/YS1tYXJjaC0xNS0y/MDIwLXRvdXJpc3Qt/dmlzaXQtYXQtaWxs/dW1pbmF0ZWQtcXV0/dWItbWluYXItYXQt/bmlnaHQuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPU5PY3RE/M1lfQVhUQ0pleXlZ/SndoN3o3NzZjaG1Y/Y00xSG1pWTB0Tmpm/WXM9',
-    path: '/monuments/ashoka-the-great'
+    imageUrl: 'https://vstatic.vietnam.vn/vietnam/resource/IMAGE/2025/8/1/6f804b659c854fe9bb1ed946f57e7ac6',
+    path: '/stories/ashoka-the-great'
   },
   {
     id: 'khalsa-birth',
     name: 'Khalsa Birth',
     description: 'The birth of the Khalsa, a significant event in Sikh history.',
-    imageUrl: 'https://example.com/khalsa-birth.jpg',
+    imageUrl: 'https://i.ytimg.com/vi/JWKRyRI1itU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDa5yp3sbIOIjDYps-pZAlae95pAg',
     path: '/stories/khalsa-birth'
   },
   {
     id: 'maharana-pratap',
     name: 'Maharana Pratap',
-    description: 'The valiant king of Mewar who resisted Mughal expansion.',
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Maharana_Pratap.jpg',
+    description: 'The valiant king of Mewar known for his bravery and resistance against the Mughal Empire.',
+    imageUrl: 'https://cdn11.bigcommerce.com/s-x49po/images/stencil/1500x1500/products/50500/67062/Maharana_Pratap_option_Fizdi_Vimanika_Arts__72204.1589018860.jpg?c=2',
     path: '/stories/maharana-pratap'
   },
   {
-    id: 'gateway-of-india',
-    name: 'Gateway of India',
-    description: 'A monumental archway in Mumbai, overlooking the Arabian Sea.',
-    imageUrl: 'https://imgs.search.brave.com/bJ7VndnZB60zhwcPoq0igIrX9fDZywhlGowcqqnrZiU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTEw/MTI0MzYxL3Bob3Rv/L2dhdGV3YXktb2Yt/aW5kaWEtYXQtbmln/aHQuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPXNSeE1nN1JO/WWRJQXF5dm1ya1Bw/Yms0eGpqN0hhZjBD/YlFNem1mVWxUREk9',
-    path: '/monuments/gateway-of-india'
+    id: 'ramayana',
+    name: 'Ramayana',
+    description: 'An ancient Indian epic narrating the life of Prince Rama.',
+    imageUrl: 'https://m.media-amazon.com/images/I/91odtfOhJ-L.jpg',
+    path: '/stories/ramayana'
   },
   {
-    id: 'india-gate',
-    name: 'India Gate',
-    description: 'A war memorial located in New Delhi.',
-    imageUrl: 'https://imgs.search.brave.com/x99A2ts2xHO8Ux9G6c4wStBMseHXKzMsYFqZpvUcp5A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zN2Fw/MS5zY2VuZTcuY29t/L2lzL2ltYWdlL2lu/Y3JlZGlibGVpbmRp/YS9pbmRpYS1nYXRl/LWRlbGhpLTUtYXR0/ci1oZXJvP3FsdD04/MiZ0cz0xNzQyMTcw/MjQwMTMx',
-    path: '/monuments/india-gate'
+    id: 'mahabharata',
+    name: 'Mahabharata',
+    description: 'An ancient Indian epic that narrates the Kurukshetra War and the fates of the Kaurava and Pandava princes.',
+    imageUrl: 'https://www.bvashram.org/wp-content/uploads/2005/11/mahabharata-01.jpg',
+    path: '/stories/mahabharata'
   },
   {
-    id: 'charminar',
-    name: 'Charminar',
-    description: 'A historical monument located in Hyderabad.',
-    imageUrl: 'https://imgs.search.brave.com/46mJQyYvUTwj67-JG_rURHR54DyDjecPGQZakUs8ZfI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NTExNjEyNDItYjVh/Zjc5N2I3MjMzP2Zt/PWpwZyZxPTYwJnc9/MzAwMCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE5ueDhZMmhoY20x/cGJtRnlmR1Z1ZkRC/OGZEQjhmSHd3',
-    path: '/monuments/charminar'
+    id: 'guru-granth-sahib',
+    name: 'Guru-Granth Sahib',
+    description: 'The holy scripture of Sikhism, containing hymns and writings of Sikh Gurus and other saints.',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWn5UKzolSZW0b0B4VZBODI3U6QgaAp0PSuQ&s',
+    path: '/monuments/guru-granth-sahib'
   },
   {
-    id: 'ajanta-caves',
-    name: 'Ajanta Caves',
-    description: 'A UNESCO World Heritage Site featuring ancient rock-cut caves.',
-    imageUrl: 'https://imgs.search.brave.com/M5UutIku7sZ4Lo459W6WiTwKXkXKITjXInX7C60bD2A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzEzLzI4Lzgz/LzM2MF9GXzcxMzI4/ODM4MF90MDdVekxY/dVc5UmhXZXFDNWNN/TkpLR1NndU9yYXN6/TS5qcGc',
-    path: '/monuments/ajanta-caves'
+    id: 'akbar-the-great',
+    name: 'Akbar the Great',
+    description: 'The Mughal emperor known for his policy of religious tolerance.',
+    imageUrl: 'https://cards.algoreducation.com/_next/image?url=https%3A%2F%2Ffiles.algoreducation.com%2Fproduction-ts%2F__S3__6a253240-77e7-4fbb-aded-06732437ce40&w=3840&q=75',
+    path: '/monuments/akbar-the-great'
   }
 ];
 

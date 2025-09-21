@@ -2,7 +2,7 @@
 
 import React from "react";
 import AnimatedBackground from "../components/AnimatedBackground";
-import FeaturedTraditions from "../components/FeaturedTraditions";
+
 import Header from "../components/Header";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -191,7 +191,7 @@ const LandingPage: React.FC = () => {
 </motion.section>
 
 
-        <motion.section
+  <motion.section
   id="stories"
   className="min-h-screen flex flex-col items-center justify-center bg-[#0d0d0d] text-white px-6 py-20"
   initial="hidden"
@@ -211,45 +211,25 @@ const LandingPage: React.FC = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-7xl">
     {[
       {
-        title: "The Glory of Taj Mahal",
-        img: "https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg",
-        desc: "A monument of eternal love, the Taj Mahal stands as a masterpiece of Mughal architecture. Every marble carving tells a story of devotion, artistry, and grandeur that has captivated visitors for centuries.",
+        title: "Ramayan-Tales of Ayodhya",
+        img: "https://m.media-amazon.com/images/I/91odtfOhJ-L.jpg",
+        desc: "The epic narrates the life of Rama, the seventh avatar of the Hindu deity Vishnu, who is a prince of Ayodhya in the kingdom of Kosala. The epic follows his fourteen-year exile to the forest urged by his father King Dasharatha.",
       },
       {
-        title: "Qutub Minar: Towering History",
-        img: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Qutub_Minar.jpg",
-        desc: "The Qutub Minar, a 73-meter high marvel, showcases the fusion of Islamic design and Indian craftsmanship. Its intricate inscriptions narrate the history of Delhi's medieval era.",
+        title: "Mahabharat: The Great War",
+        img: "https://www.bvashram.org/wp-content/uploads/2005/11/mahabharata-01.jpg",
+        desc: "The Mahabharata is an ancient Indian epic that narrates the Kurukshetra War and the fates of the Kaurava and Pandava princes. It explores themes of duty, righteousness, and the moral dilemmas faced by its characters.",
       },
       {
-        title: "Red Fort Chronicles",
-        img: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Red_Fort_in_New_Delhi_03-2016_img3.jpg",
-        desc: "Lal Qila, or the Red Fort, resonates with tales of Mughal emperors, political intrigue, and grand celebrations. Its walls echo centuries of history preserved in stone and courtyard gardens.",
+        title: "Guru-Grath Sahib: The Eternal Light",
+        img: "https://mir-s3-cdn-cf.behance.net/projects/404/17d883180129359.Y3JvcCwxNTAwLDExNzMsMCw1OQ.jpg",
+        desc: "The Guru Granth Sahib, the holy scripture of Sikhism, is a timeless source of wisdom and guidance. Its verses, composed by various saints and gurus, illuminate the path of righteousness and devotion.",
       },
       {
-        title: "India Gate: Remembrance & Pride",
-        img: "https://upload.wikimedia.org/wikipedia/commons/9/9f/India_Gate_in_New_Delhi_03-2016_img1.jpg",
-        desc: "India Gate is more than an architectural marvel; it is a testament to the bravery of soldiers. The surrounding lawns and illuminated archway narrate stories of valor and national pride.",
-      },
-      {
-        title: "Ajanta Caves: Art in Stone",
-        img: "https://upload.wikimedia.org/wikipedia/commons/7/70/Ajanta_Caves_Painting.jpg",
-        desc: "Hidden in the hills of Maharashtra, Ajanta Caves preserve Buddhist art spanning centuries. Every fresco and sculpture reveals cultural, religious, and artistic traditions of ancient India.",
-      },
-      {
-        title: "Konark Sun Temple: Dance of Light",
-        img: "https://upload.wikimedia.org/wikipedia/commons/8/87/Konark_Sun_Temple_1.jpg",
-        desc: "The Konark Sun Temple, designed like a colossal chariot, celebrates the sun god through intricate carvings and moving shadows, narrating celestial tales frozen in stone.",
-      },
-      {
-        title: "Hampi Ruins: Ancient Capital",
-        img: "https://upload.wikimedia.org/wikipedia/commons/3/33/Vittala_Temple_Stone_Carvings.jpg",
-        desc: "Hampi, the erstwhile Vijayanagara Empire capital, is dotted with grand temples and monuments. Its ruins tell stories of prosperity, culture, and devotion of a bygone era.",
-      },
-      {
-        title: "Khajuraho Temples: Erotic Sculptures",
-        img: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Khajuraho_Temple_Sculptures.jpg",
-        desc: "The Khajuraho group of temples in Madhya Pradesh are celebrated for their intricate carvings and erotic sculptures, reflecting the artistic freedom and cultural richness of medieval India.",
-      },
+        title: "Akbar: The Great Mughal",
+        img: "https://cards.algoreducation.com/_next/image?url=https%3A%2F%2Ffiles.algoreducation.com%2Fproduction-ts%2F__S3__67e6e5e0-8d50-4702-abf4-86b2615b2256&w=3840&q=75",
+        desc: "Akbar, the third Mughal emperor, is celebrated for his contributions to art, culture, and religion. His reign marked a golden age in Indian history, characterized by tolerance and integration.",
+      }
     ].map((story, idx) => (
       <motion.div
         key={idx}
@@ -280,24 +260,113 @@ const LandingPage: React.FC = () => {
   </a>
 </motion.section>
 
-        {/* Dance Section */}
+        {/* Indian States Section */}
         <motion.section
-          id="dance"
-          className="min-h-screen flex items-center justify-center bg-[#222] text-white px-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={scrollFadeIn}
-        >
-          <motion.h2
-            className="text-5xl font-bold text-amber-300 drop-shadow-lg cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-          >
-            Classical Dance Forms
-          </motion.h2>
-        </motion.section>
+  id="states"
+  className="min-h-screen flex flex-col items-center justify-center bg-[#111] text-white px-6 py-24"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={scrollFadeIn}
+>
+  {/* Heading */}
+  <motion.h2
+    className="text-6xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-white to-green-500 drop-shadow-lg"
+    whileHover={{ scale: 1.05 }}
+  >
+    States & Union Territories of India
+  </motion.h2>
 
-        <FeaturedTraditions />
+  {/* Cards Grid */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-7xl">
+    {[
+      // --- States ---
+      {
+        name: "Punjab",
+        img: "https://static.toiimg.com/photo/108178837.cms",
+        desc: "Known as the land of five rivers, Punjab is famous for its vibrant culture, Bhangra dance, fertile fields, and the iconic Golden Temple in Amritsar.",
+      },
+      {
+        name: "Maharashtra",
+        img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/4e/55/e6/chhatrapati-shivaji-terminus.jpg?w=1200&h=-1&s=1",
+        desc: "Maharashtra is home to Mumbai, the financial capital of India, Ajanta-Ellora caves, and diverse landscapes ranging from beaches to hill stations.",
+      },
+      {
+        name: "Sikkim",
+        img: "https://holidays.tripfactory.com/sikkim/wp-content/uploads/sites/18/2024/10/Things-to-do-in-Lachung.png",
+        desc: "Nestled in the Himalayas, Sikkim is known for its monasteries, breathtaking landscapes, Kanchenjunga peak, and rich Buddhist culture.",
+      },
+      {
+        name: "Tamil Nadu",
+        img: "https://media.tacdn.com/media/attractions-splice-spp-720x480/15/3b/8c/de.jpg",
+        desc: "Tamil Nadu boasts ancient Dravidian temples, Bharatanatyam dance, classical Carnatic music, and scenic destinations like Ooty and Kanyakumari.",
+      },
+
+      // --- Union Territories ---
+      {
+        name: "Ladakh",
+        img: "https://wanderon-images.gumlet.io/blogs/new/2023/12/leh-ladakh.jpg",
+        desc: "Ladakh, the land of high passes, is known for its Buddhist monasteries, Pangong Lake, and breathtaking Himalayan landscapes.",
+      },
+      {
+        name: "Delhi",
+        img: "https://img.freepik.com/photos-gratuite/scene-batiments-ville-indienne_23-2151823080.jpg?semt=ais_incoming&w=740&q=80",
+        desc: "India’s capital city, Delhi, is a blend of Mughal heritage, colonial architecture, bustling markets, and the seat of India’s government.",
+      },
+      {
+        name: "Andaman & Nicobar Islands",
+        img: "https://indiadekha.com/wp-content/uploads/2025/03/DALL%C2%B7E-2025-03-25-19.06.52-A-scenic-view-of-Port-Blair-the-capital-of-Andaman-and-Nicobar-Islands.-The-image-features-a-beautiful-coastline-with-turquoise-waters-a-bustling-ha-1024x585.webp",
+        desc: "Andaman & Nicobar Islands are famous for their pristine beaches, coral reefs, cellular jail, and tropical forests.",
+      },
+      {
+        name: "Lakshadweep",
+        img: "https://etimg.etb2bimg.com/photo/109819916.cms",
+        desc: "Lakshadweep is a group of exotic islands in the Arabian Sea, known for lagoons, marine life, and water sports adventures.",
+      },
+    ].map((place, idx) => (
+      <motion.div
+        key={idx}
+        className="relative rounded-xl overflow-hidden cursor-pointer group shadow-lg transition-transform duration-200"
+        whileHover={{ scale: 1.06, boxShadow: "0 0 40px rgba(255, 193, 7, 0.7)" }}
+      >
+        <img
+          src={place.img}
+          alt={place.name}
+          className="w-full h-72 md:h-80 lg:h-96 object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-md text-gray-200 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out flex flex-col justify-end">
+          <h3 className="text-2xl font-semibold text-amber-400 mb-2">{place.name}</h3>
+          <p className="text-sm">{place.desc}</p>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+
+  {/* See All Button */}
+  <a href="/states" className="mt-16">
+    <motion.button
+      whileHover={{
+        scale: 1.1,
+        boxShadow:
+          "0px 0px 20px rgba(255, 193, 7, 0.8), 0px 0px 40px rgba(255, 193, 7, 0.4)",
+        transition: { duration: 10, repeat: Infinity, repeatType: "mirror" },
+      }}
+      whileTap={{ scale: 0.95 }}
+      className="
+        mt-12 px-10 py-4 rounded-full font-bold text-white
+        bg-black/80 backdrop-blur-md
+        border border-amber-400
+        shadow-lg shadow-amber-500/40
+        transition-all duration-200 ease-in-out
+        font-serif text-xl"
+    >
+      See All States & UTs
+    </motion.button>
+  </a>
+</motion.section>
+
+
+        
       </div>
     </>
   );
