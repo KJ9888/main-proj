@@ -1,6 +1,10 @@
+// src/components/Header.tsx
+
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+// 1. Searchbar component ko import karein
+import Searchbar from "./Searchbar";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
@@ -17,29 +21,44 @@ const Header: React.FC = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl font-bold font-serif cursor-pointer"
+          className="text-4xl font-bold font-serif cursor-pointer"
           onClick={goHome}
         >
           VIRASAT
         </motion.div>
 
-        <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/monuments" className="text-gray-300 hover:text-white">
-            Monuments
-          </Link>
-          <Link to="/manuscripts" className="text-gray-300 hover:text-white">
-            Manuscripts
-          </Link>
-          <Link to="/dance" className="text-gray-300 hover:text-white">
-            Dance Forms
-          </Link>
-          <Link to="/culture" className="text-gray-300 hover:text-white">
-            Culture
-          </Link>
-          <Link to="/states" className="text-gray-300 hover:text-white">
-            Explore States
-          </Link>
-        </nav>
+        {/* 2. Nav links aur Searchbar ko ek saath group karein */}
+        <div className="hidden md:flex items-center space-x-8">
+          {/* 3. Yahan par Searchbar component add karein */}
+          <Searchbar />
+
+          <nav className="flex items-center space-x-8">
+            <Link to="/monuments" className="bg-[linear-gradient(to_right,#FF9933,#FFFFFF,#138808)]"
+              style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 'bold' }}>
+              Monuments
+            </Link>
+            <Link to="/stories" className="bg-[linear-gradient(to_right,#FF9933,#FFFFFF,#138808)]"
+              style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 'bold' }}>
+              Stories
+            </Link>
+            <Link to="/states" className="bg-[linear-gradient(to_right,#FF9933,#FFFFFF,#138808)] "
+              style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 'bold' }}>
+              States
+            </Link>
+            <Link to="/unionterritories" className="bg-[linear-gradient(to_right,#FF9933,#FFFFFF,#138808)]"
+              style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 'bold' }}>
+              Union Territories
+            </Link>
+            <Link to="/plantrip" className="bg-[linear-gradient(to_right,#FF9933,#FFFFFF,#138808)]"
+              style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 'bold' }}>
+              Plan Your Trip
+            </Link>
+            <Link to="/store" className="bg-[linear-gradient(to_right,#FF9933,#FFFFFF,#138808)]"
+              style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 'bold' }}>
+              Store
+            </Link>
+          </nav>
+        </div>
       </div>
     </header>
   );

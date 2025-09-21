@@ -6,34 +6,34 @@ import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const monumentsData = [
+const storiesData = [
   {
-    id: 'taj-mahal',
-    name: 'Taj Mahal',
-    description: "Agra's white marble monument built by Shah Jahan.",
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg',
-    path: '/monuments/taj-mahal'
+    id: 'sambhaji-maharaj',
+    name: 'Sambhaji Maharaj',
+    description: "The valiant Maratha king and his defiance against the Mughal Empire.",
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Sambhaji_Maharaj_portrait.jpg',
+    path: '/stories/sambhaji-maharaj'
   },
   {
-    id: 'qutub-minar',
-    name: 'Qutub Minar',
-    description: 'A UNESCO site in Delhi — tall brick minaret.',
+    id: 'ashoka-the-great',
+    name: 'Ashoka the Great',
+    description: 'The emperor who waged war on war itself.',
     imageUrl: 'https://imgs.search.brave.com/l9UgXOvqatlGaODTXZbw0qLap2LOqO-FrZ6aG8hBl_g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI1/MTUzNzUzMy9waG90/by9kZWxoaS1pbmRp/YS1tYXJjaC0xNS0y/MDIwLXRvdXJpc3Qt/dmlzaXQtYXQtaWxs/dW1pbmF0ZWQtcXV0/dWItbWluYXItYXQt/bmlnaHQuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPU5PY3RE/M1lfQVhUQ0pleXlZ/SndoN3o3NzZjaG1Y/Y00xSG1pWTB0Tmpm/WXM9',
-    path: '/monuments/qutub-minar'
+    path: '/monuments/ashoka-the-great'
   },
   {
-    id: 'red-fort',
-    name: 'Red Fort',
-    description: 'Delhi’s iconic fort and a UNESCO World Heritage Site.',
-    imageUrl: 'https://imgs.search.brave.com/N6ps6UTfVbXn7Zh-b_rOkGAdpjtoL9H5TWj9EIosX5c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzk3LzIzLzQw/LzM2MF9GXzU5NzIz/NDA2OF9YN3VmZllq/YnBaUnREUTB4QmJa/QmtCU3dhV1AzZU1X/TS5qcGc',
-    path: '/monuments/red-fort'
+    id: 'khalsa-birth',
+    name: 'Khalsa Birth',
+    description: 'The birth of the Khalsa, a significant event in Sikh history.',
+    imageUrl: 'https://example.com/khalsa-birth.jpg',
+    path: '/stories/khalsa-birth'
   },
   {
-    id: 'hawa-mahal',
-    name: 'Hawa Mahal',
-    description: 'A stunning palace in Jaipur known for its unique architecture.',
-    imageUrl: 'https://imgs.search.brave.com/tOC_2mgsX4E35WzzvpgfkQ1rdAMUqrXfMw-0M_uB9EQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE2LzQ0LzIx/LzM2MF9GXzIxNjQ0/MjEyMV9ZUGxqMU92/Z1NpOWpRY1Q4WWJi/OE40ak56VUVRUkxn/cC5qcGc',
-    path: '/monuments/hawa-mahal'
+    id: 'maharana-pratap',
+    name: 'Maharana Pratap',
+    description: 'The valiant king of Mewar who resisted Mughal expansion.',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Maharana_Pratap.jpg',
+    path: '/stories/maharana-pratap'
   },
   {
     id: 'gateway-of-india',
@@ -62,13 +62,6 @@ const monumentsData = [
     description: 'A UNESCO World Heritage Site featuring ancient rock-cut caves.',
     imageUrl: 'https://imgs.search.brave.com/M5UutIku7sZ4Lo459W6WiTwKXkXKITjXInX7C60bD2A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzEzLzI4Lzgz/LzM2MF9GXzcxMzI4/ODM4MF90MDdVekxY/dVc5UmhXZXFDNWNN/TkpLR1NndU9yYXN6/TS5qcGc',
     path: '/monuments/ajanta-caves'
-  },
-  {
-    id: 'konark-sun-temple',
-    name: 'Sun Temple, Konark',
-    description: 'A historical monument located in Odisha.',
-    imageUrl: 'https://imgs.search.brave.com/P0b_QlQOC2vKCOYiGvSTtR9M_G9W8E-5xU4VeXccm8s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEzLzk1LzI4Lzk0/LzM2MF9GXzEzOTUy/ODk0OTBfQlFHRlNO/bGtsejhGMlE3VUNv/Uk5HUGRuTnBoYkht/TlUuanBn',
-    path: '/monuments/konark-sun-temple'
   }
 ];
 
@@ -86,7 +79,7 @@ const cardVariants = {
   show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const MonumentsPage: React.FC = () => {
+const StoriesPage: React.FC = () => {
   return (
     <motion.div className="min-h-screen bg-[#111] text-white">
       <Header />
@@ -101,7 +94,7 @@ const MonumentsPage: React.FC = () => {
                      bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-white to-green-500
                      drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]"
         >
-          Monuments of India
+          Stories of Our Heritage
         </motion.h1>
 
         {/* Grid with Staggered Animation */}
@@ -111,8 +104,8 @@ const MonumentsPage: React.FC = () => {
           animate="show"
           variants={containerVariants}
         >
-          {monumentsData.map((monument) => (
-            <Link to={monument.path} key={monument.id}>
+          {storiesData.map((story) => (
+            <Link to={story.path} key={story.id}>
               <motion.div
                 variants={cardVariants}
 
@@ -121,15 +114,15 @@ const MonumentsPage: React.FC = () => {
               >
                 {/* Card Image with fixed height */}
                 <motion.img
-                  src={monument.imageUrl}
-                  alt={monument.name}
+                  src={story.imageUrl}
+                  alt={story.name}
                   className="w-full h-64 object-cover"
                 />
                 {/* Card content with fixed height to make all cards uniform */}
                 <div className="p-6 bg-gray-900 bg-opacity-70 flex-1 flex flex-col justify-start">
                   <div className="h-1 w-full bg-gradient-to-r from-orange-400 via-white to-green-500 mb-2 rounded"></div>
-                  <h3 className="text-2xl font-bold">{monument.name}</h3>
-                  <p className="text-gray-300 mt-2">{monument.description}</p>
+                  <h3 className="text-2xl font-bold">{story.name}</h3>
+                  <p className="text-gray-300 mt-2">{story.description}</p>
                 </div>
               </motion.div>
             </Link>
@@ -142,4 +135,4 @@ const MonumentsPage: React.FC = () => {
   );
 };
 
-export default MonumentsPage;
+export default StoriesPage;

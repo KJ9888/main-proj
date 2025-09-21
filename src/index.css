@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 
-/* Custom styles for the body and background glow */
+
 body {
   background-color: #0c0a09;
   color: white;
@@ -24,3 +24,4 @@ body::after {
   );
   filter: blur(100px);
 }
+
